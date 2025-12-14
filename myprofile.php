@@ -21,7 +21,7 @@ $last_name = $_SESSION['last_name'] ?? '';
 $middle_name = '';
 $email = $_SESSION['email'] ?? '';
 $home_address = '';
-$home_phone = '';
+$phone = '';
 $date_of_birth = '';
 $gender = '';
 $place_of_birth = '';
@@ -300,7 +300,7 @@ try {
         $middle_name = $student['middle_name'] ?? '';
         $email = $student['email'] ?? '';
         $home_address = $student['home_address'] ?? '';
-        $home_phone = $student['home_phone'] ?? '';
+        $phone = $student['phone'] ?? '';
         $date_of_birth = $student['date_of_birth'] ?? '';
         $gender = $student['gender'] ?? '';
         $place_of_birth = $student['place_of_birth'] ?? '';
@@ -710,9 +710,9 @@ try {
                                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                             <i class="fas fa-phone text-gray-400"></i>
                                         </div>
-                                        <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>" 
-                                       class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 focus:outline-none transition duration-200"
-                                       placeholder="(123) 456-7890">
+                                        <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone ?? ''); ?>" 
+                                            class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm transition duration-200"
+                                            placeholder="(123) 456-7890">
                                     </div>
                                 </div>
 
